@@ -15,21 +15,16 @@ public class GameManager : MonoBehaviour
     bool isPaused = false;
     private float elapsedTime = 0;
 
-    // For resetting car pos
-    public float initialPosX;
-    public float initialPosY;
-    public float initialPosZ;
-
     public TMP_Text currentTimeText;
     public TMP_Text finalTimeText;
 
     // When game is in pause
-    public GameObject playAgainButton;
+    public GameObject resetLevelButton;
     public GameObject levelSelectorButton;
     public TMP_Text pauseText;
 
     // When finish zone is reached
-    public GameObject resetLevelButton;
+    public GameObject resetLevelButton2;
     public GameObject levelSelectorButton2;
 
     public String resetLevel;
@@ -51,7 +46,7 @@ public class GameManager : MonoBehaviour
         // Pause game
         if (!isGameOver && !isPaused && Input.GetKeyDown(KeyCode.Return))
         {
-            playAgainButton.SetActive(true);
+            resetLevelButton2.SetActive(true);
             levelSelectorButton.SetActive(true);
             pauseText.enabled = true; 
             Time.timeScale = 0;
@@ -60,7 +55,7 @@ public class GameManager : MonoBehaviour
         // Unpause game
         else if (!isGameOver && isPaused && Input.GetKeyDown(KeyCode.Return))
         {
-            playAgainButton.SetActive(false);
+            resetLevelButton2.SetActive(false);
             levelSelectorButton.SetActive(false);
             pauseText.enabled = false;
             isPaused = false;
