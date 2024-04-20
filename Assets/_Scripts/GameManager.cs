@@ -18,14 +18,11 @@ public class GameManager : MonoBehaviour
     public TMP_Text currentTimeText;
     public TMP_Text finalTimeText;
 
-    // When game is in pause
+    // When game is in pause or finished
     public GameObject resetLevelButton;
     public GameObject levelSelectorButton;
     public TMP_Text pauseText;
 
-    // When finish zone is reached
-    public GameObject resetLevelButton2;
-    public GameObject levelSelectorButton2;
 
     public String resetLevel;
 
@@ -46,7 +43,7 @@ public class GameManager : MonoBehaviour
         // Pause game
         if (!isGameOver && !isPaused && Input.GetKeyDown(KeyCode.Return))
         {
-            resetLevelButton2.SetActive(true);
+            resetLevelButton.SetActive(true);
             levelSelectorButton.SetActive(true);
             pauseText.enabled = true; 
             Time.timeScale = 0;
@@ -55,7 +52,7 @@ public class GameManager : MonoBehaviour
         // Unpause game
         else if (!isGameOver && isPaused && Input.GetKeyDown(KeyCode.Return))
         {
-            resetLevelButton2.SetActive(false);
+            resetLevelButton.SetActive(false);
             levelSelectorButton.SetActive(false);
             pauseText.enabled = false;
             isPaused = false;
@@ -65,7 +62,7 @@ public class GameManager : MonoBehaviour
         if (isGameOver)
         {
             resetLevelButton.SetActive(true);
-            levelSelectorButton2.SetActive(true);
+            levelSelectorButton.SetActive(true);
             currentTimeText.enabled = false;
             finalTimeText.enabled = true;
             finalTimeText.SetText("Final time: " + (int)elapsedTime + " sec");
