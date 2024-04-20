@@ -25,12 +25,16 @@ public class CarController : MonoBehaviour
     public float turnSensitivity = 1.0f;
     public float maxSteerAngle = 30.0f;
 
+    public GameObject leftHeadlight;
+    public GameObject rightHeadlight;
+
     public Vector4 _centerOfMass;
 
     public List<wheel> wheels;
 
     float moveInput;
     float steerInput;
+    bool headLight = false;
 
     private Rigidbody carRb;
 
@@ -44,6 +48,21 @@ public class CarController : MonoBehaviour
     {
         GetInputs();
         AnimationWheels();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (headLight == true)
+            {
+                headLight = false;
+                leftHeadlight.SetActive(false);
+                rightHeadlight.SetActive(false);
+            }
+            else if (headLight == false)
+            {
+                headLight = true;
+                leftHeadlight.SetActive(true);
+                rightHeadlight.SetActive(true);
+            }
+        }
     }
 
     private void LateUpdate()
@@ -108,5 +127,4 @@ public class CarController : MonoBehaviour
             wheel.wheelModel.transform.rotation = rot;
         }
     }
-
 }
