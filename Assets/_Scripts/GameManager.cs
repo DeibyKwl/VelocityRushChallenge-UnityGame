@@ -23,12 +23,15 @@ public class GameManager : MonoBehaviour
     public GameObject levelSelectorButton;
     public TMP_Text pauseText;
 
+    public TMP_Text bestTimeText;
+    private int bestTime;
 
-    public String resetLevel;
+    public String level;
 
     void Start()
     {
         Time.timeScale = 1;
+        Load();
     }
 
     void Update()
@@ -61,11 +64,18 @@ public class GameManager : MonoBehaviour
 
         if (isGameOver)
         {
+            if ((int)elapsedTime < bestTime)
+            {   
+                bestTime = (int)elapsedTime;
+                Save();
+            }
             resetLevelButton.SetActive(true);
             levelSelectorButton.SetActive(true);
             currentTimeText.enabled = false;
             finalTimeText.enabled = true;
             finalTimeText.SetText("Final time: " + (int)elapsedTime + " sec");
+            bestTimeText.enabled = true;
+            bestTimeText.SetText("Best time: " + bestTime + " sec");
             Time.timeScale = 0;
         }
     }
@@ -83,7 +93,18 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        SceneManager.LoadScene(resetLevel);
+        SceneManager.LoadScene(level);
+    }
+
+    // To save data
+    public void Save()
+    {
+        PlayerPrefs.SetInt(level, bestTime);
+    }
+
+    public void Load()
+    {
+        bestTime = PlayerPrefs.GetInt(level, 10000);
     }
 
 }

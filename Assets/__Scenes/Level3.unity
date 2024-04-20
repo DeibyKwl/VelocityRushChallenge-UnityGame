@@ -5284,7 +5284,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: 60, z: 0}
 --- !u!1001 &1744013337
 PrefabInstance:
@@ -5470,22 +5470,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResetLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 7037168054344780520, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2037764890}
+    - target: {fileID: 7037168054344780520, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037168054605277111, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2037764890}
+    - target: {fileID: 7037168054605277111, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSelectLevelScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
 --- !u!114 &1896664471 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4500567619388721651, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6907450252693407431, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
   m_PrefabInstance: {fileID: 1896664470}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1896664472 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4500567619929566344, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7037168054491023708, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
   m_PrefabInstance: {fileID: 1896664470}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -5496,17 +5512,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!1 &1896664473 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4500567620010213989, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7037168054605277105, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
   m_PrefabInstance: {fileID: 1896664470}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1896664474 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4500567620824493886, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7037168054344780522, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
   m_PrefabInstance: {fileID: 1896664470}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1896664475 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7372283671798890617, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7037168055023479847, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
+  m_PrefabInstance: {fileID: 1896664470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1896664476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4148850553873540525, guid: 9d7f5c61dd3668d4aa8864ac71fcf0ea, type: 3}
   m_PrefabInstance: {fileID: 1896664470}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -5575,6 +5602,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 985509675}
     - target: {fileID: 7825306038847010503, guid: 04ccdad51addec74c8b57da9f9d4eeb1, type: 3}
+      propertyPath: level
+      value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825306038847010503, guid: 04ccdad51addec74c8b57da9f9d4eeb1, type: 3}
       propertyPath: pauseText
       value: 
       objectReference: {fileID: 1896664472}
@@ -5583,13 +5614,17 @@ PrefabInstance:
       value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 7825306038847010503, guid: 04ccdad51addec74c8b57da9f9d4eeb1, type: 3}
-      propertyPath: finalTimeText
+      propertyPath: bestTimeText
       value: 
       objectReference: {fileID: 1896664471}
     - target: {fileID: 7825306038847010503, guid: 04ccdad51addec74c8b57da9f9d4eeb1, type: 3}
-      propertyPath: currentTimeText
+      propertyPath: finalTimeText
       value: 
       objectReference: {fileID: 1896664475}
+    - target: {fileID: 7825306038847010503, guid: 04ccdad51addec74c8b57da9f9d4eeb1, type: 3}
+      propertyPath: currentTimeText
+      value: 
+      objectReference: {fileID: 1896664476}
     - target: {fileID: 7825306038847010503, guid: 04ccdad51addec74c8b57da9f9d4eeb1, type: 3}
       propertyPath: resetLevelButton
       value: 
